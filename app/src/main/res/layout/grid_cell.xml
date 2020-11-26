@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/topLeft"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomLeft"
+        app:layout_constraintRight_toLeftOf="@id/topRight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/topRight"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/topLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/bottomRight"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@id/topRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/bottomLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/bottomLeft"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@id/topLeft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bottomRight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/structureImg"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:srcCompat="@android:color/transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

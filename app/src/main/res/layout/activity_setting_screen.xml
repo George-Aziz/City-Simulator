@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".activities.SettingScreenActivity">
+
+    <EditText
+        android:id="@+id/mapHeightVal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/initMoneyVal"
+        app:layout_constraintStart_toEndOf="@+id/mapHeight"
+        app:layout_constraintTop_toBottomOf="@+id/mapWidthVal" />
+
+    <EditText
+        android:id="@+id/mapWidthVal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/mapHeightVal"
+        app:layout_constraintStart_toEndOf="@+id/mapWidth"
+        app:layout_constraintTop_toBottomOf="@+id/settingsScreenTitle" />
+
+    <TextView
+        android:id="@+id/mapWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:text="Map Width: "
+        app:layout_constraintBottom_toTopOf="@+id/mapHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsScreenTitle" />
+
+    <TextView
+        android:id="@+id/cityNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="City Name: "
+        app:layout_constraintBottom_toTopOf="@+id/note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roadCost" />
+
+    <TextView
+        android:id="@+id/mapHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Map Height: "
+        app:layout_constraintBottom_toTopOf="@+id/initialMoney"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapWidth" />
+
+    <TextView
+        android:id="@+id/initialMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Initial Money: "
+        app:layout_constraintBottom_toTopOf="@+id/serviceCost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapHeight" />
+
+    <TextView
+        android:id="@+id/serviceCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Service Cost: "
+        app:layout_constraintBottom_toTopOf="@+id/houseCost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initialMoney" />
+
+    <TextView
+        android:id="@+id/houseCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="House Building Cost: "
+        app:layout_constraintBottom_toTopOf="@+id/commCost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceCost" />
+
+    <TextView
+        android:id="@+id/commCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Commerical Building Cost: "
+        app:layout_constraintBottom_toTopOf="@+id/roadCost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/houseCost" />
+
+    <TextView
+        android:id="@+id/roadCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Road Building Cost: "
+        app:layout_constraintBottom_toTopOf="@+id/cityNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commCost" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="NOTE: IF CITY NAME INPUT IS A FAKE CITY NAME, TEMPERATURE VALUE IN GAME WILL BE 'N/A'"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/confirmBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameLabel" />
+
+    <TextView
+        android:id="@+id/settingsScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GAME SETTINGS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mapWidth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:gravity="center"
+        android:text="START NEW GAME"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note" />
+
+    <EditText
+        android:id="@+id/commCostVal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/roadCostVal"
+        app:layout_constraintStart_toEndOf="@+id/commCost"
+        app:layout_constraintTop_toBottomOf="@+id/houseCostVal" />
+
+    <EditText
+        android:id="@+id/roadCostVal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/cityNameIn"
+        app:layout_constraintStart_toEndOf="@+id/roadCost"
+        app:layout_constraintTop_toBottomOf="@+id/commCostVal" />
+
+    <EditText
+        android:id="@+id/houseCostVal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/commCostVal"
+        app:layout_constraintStart_toEndOf="@+id/houseCost"
+        app:layout_constraintTop_toBottomOf="@+id/serviceCostVal" />
+
+    <EditText
+        android:id="@+id/serviceCostVal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/houseCostVal"
+        app:layout_constraintStart_toEndOf="@+id/serviceCost"
+        app:layout_constraintTop_toBottomOf="@+id/initMoneyVal" />
+
+    <EditText
+        android:id="@+id/initMoneyVal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/serviceCostVal"
+        app:layout_constraintStart_toEndOf="@+id/initialMoney"
+        app:layout_constraintTop_toBottomOf="@+id/mapHeightVal" />
+
+    <EditText
+        android:id="@+id/cityNameIn"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="textAutoCorrect|textCapSentences"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/note"
+        app:layout_constraintStart_toEndOf="@+id/cityNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/roadCostVal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
